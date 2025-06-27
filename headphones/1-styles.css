@@ -1,4 +1,92 @@
-/* What we do section */
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Variables */
+:root {
+  --primary-color: #ff6565;
+  --text-color: #333;
+  --light-text-color: #fff;
+  --background-color: #f4f4f4;
+  --max-width: 1000px;
+  --font-family: 'Source Sans Pro', sans-serif;
+}
+
+/* Global Styles */
+body {
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header Styles */
+.header {
+  background: url('images/headphones_hero_1.jpg') no-repeat center/cover;
+  color: var(--light-text-color);
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.logo {
+  margin-bottom: 20px;
+}
+
+.logo img {
+  width: 150px;
+}
+
+.nav {
+  margin-bottom: 30px;
+}
+
+.nav a {
+  color: var(--light-text-color);
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: 500;
+}
+
+.nav a:hover,
+.nav a:active {
+  color: var(--primary-color);
+}
+
+.content h1 {
+  font-size: 2.5em;
+  margin-bottom: 15px;
+}
+
+.content p {
+  font-size: 1.1em;
+  margin-bottom: 25px;
+}
+
+.content button {
+  background-color: var(--primary-color);
+  color: var(--light-text-color);
+  border: none;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.content button:hover,
+.content button:active {
+  opacity: 0.9;
+}
+
+/* What We Do Section */
 .what-we-do {
   text-align: center;
   padding: 60px 20px;
@@ -11,7 +99,7 @@
   margin-bottom: 10px;
 }
 
-.what-we-do p {
+.what-we-do > p {
   margin-bottom: 40px;
   font-size: 1.1em;
 }
@@ -45,10 +133,33 @@
   font-size: 1em;
 }
 
-/* Responsive design */
+/* Responsive Design */
 @media (max-width: 768px) {
   .services {
     flex-direction: column;
     align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 30px 20px;
+  }
+
+  .nav a {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .logo img {
+    width: 120px;
+  }
+
+  .content h1 {
+    font-size: 1.8em;
+  }
+
+  .content p {
+    font-size: 1em;
   }
 }
