@@ -1,0 +1,54 @@
+/* What we do section */
+.what-we-do {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #fff;
+  color: var(--text-color);
+}
+
+.what-we-do h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.what-we-do p {
+  margin-bottom: 40px;
+  font-size: 1.1em;
+}
+
+.services {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.service {
+  flex: 1 1 250px;
+  padding: 20px;
+  max-width: 300px;
+}
+
+.service span {
+  font-size: 3em;
+  color: var(--primary-color);
+  display: block;
+  margin-bottom: 15px;
+}
+
+.service h3 {
+  margin-bottom: 10px;
+  font-size: 1.3em;
+}
+
+.service p {
+  font-size: 1em;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .services {
+    flex-direction: column;
+    align-items: center;
+  }
+}
